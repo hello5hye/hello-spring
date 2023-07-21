@@ -17,8 +17,10 @@ public class MemberController {
 
     @Autowired
     public MemberController(MemberService memberService) {
-
         this.memberService = memberService;
+
+        // 프록시 적용되는지 확인해보기
+//        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
